@@ -1,0 +1,112 @@
+<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python Classes and Objects for Beginners (L21) | ShareYourGroup</title><meta name="description" content="A gentle start with classes in Python: what an object is, writing a class with __init__ and self, adding methods, and when a class is worth using."><link rel="canonical" href="https://python.shareyourgroup.com/classes/"><meta property="og:type" content="website"><meta property="og:title" content="Python Classes and Objects for Beginners (L21) | ShareYourGroup"><meta property="og:description" content="A gentle start with classes in Python: what an object is, writing a class with __init__ and self, adding methods, and when a class is worth using."><meta property="og:url" content="https://python.shareyourgroup.com/classes/"><meta property="og:site_name" content="Python by ShareYourGroup"><meta property="og:image" content="https://python.shareyourgroup.com/icons/share.png"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#06080c"><link rel="icon" href="/icons/fav-32.png"><link rel="apple-touch-icon" href="/icons/icon-180.png"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5935207738848708" crossorigin="anonymous"></script><style>:root{--bg:#f4f6fa;--ink:#0b1220}@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#06080c;--ink:#eef2f7}}:root[data-theme=dark]{--bg:#06080c;--ink:#eef2f7}html{background:var(--bg);color:var(--ink)}body{margin:0;background:var(--bg)}.boot{position:fixed;inset:0;background:var(--bg);z-index:100;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;opacity:0;pointer-events:none;animation:bi .2s ease .25s forwards}.boot i{width:84px;height:84px;border-radius:22px;background:url(/icons/icon-192.png) center/cover no-repeat;animation:bb 1.2s ease-in-out infinite}.boot b{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg,transparent,#25d366,transparent);background-size:200% 100%;animation:bs 1.1s linear infinite}@keyframes bi{to{opacity:1}}@keyframes bb{50%{transform:scale(1.07)}}@keyframes bs{from{background-position:200% 0}to{background-position:-200% 0}}html.ready .boot{display:none}html.ready main{animation:sin .3s ease-out}@keyframes sin{from{opacity:0;transform:translateY(6px)}}@media (prefers-reduced-motion:reduce){.boot i,.boot b,html.ready main{animation:none}}</style><noscript><style>.boot{display:none}</style></noscript><script>try{var t=localStorage.getItem("syg-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}setTimeout(function(){document.documentElement.classList.add("ready")},4000)</script><link rel="preload" href="/assets/site.css?v=1f799d5064" as="style"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://python.shareyourgroup.com/#site", "url": "https://python.shareyourgroup.com/", "name": "Python by ShareYourGroup", "publisher": {"@type": "Organization", "name": "ShareYourGroup", "url": "https://www.shareyourgroup.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Python", "item": "https://python.shareyourgroup.com/"}, {"@type": "ListItem", "position": 2, "name": "Lessons", "item": "https://python.shareyourgroup.com/lessons/"}, {"@type": "ListItem", "position": 3, "name": "Classes and objects", "item": "https://python.shareyourgroup.com/classes/"}]}, {"@type": "Article", "headline": "Classes and objects", "description": "A gentle start with classes in Python: what an object is, writing a class with __init__ and self, adding methods, and when a class is worth using.", "inLanguage": "en-IN", "dateModified": "2026-11-12", "author": {"@type": "Organization", "name": "ShareYourGroup"}}]}</script></head><body><div class="boot" aria-hidden="true"><i></i><b></b></div><link rel="stylesheet" href="/assets/site.css?v=1f799d5064"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap" media="print" onload="this.media='all'"><a class="skip" href="#main">Skip to content</a><header class="hd"><div class="wrap hd-in"><a class="brand" href="/" aria-label="Python by ShareYourGroup, home"><img class="mk mk-l" src="/icons/logo-light.webp" alt="ShareYourGroup" width="200" height="44"><img class="mk mk-d" src="/icons/logo-dark.webp" alt="ShareYourGroup" width="200" height="44"><i>Python</i></a><nav class="nav" aria-label="Sections"><a href="/">Start</a><a href="/lessons/">Lessons</a><a href="/practice/">Practice</a><a href="/projects/">Projects</a><a href="/errors/">Errors</a><a href="/cheat-sheet/">Cheat sheet</a></nav><button class="ic" type="button" data-theme-btn aria-label="Light or dark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></div></header><nav class="crumbs wrap" aria-label="You are here"><a href="/">Python</a> › <a href="/lessons/">Lessons</a></nav><main id="main"><link rel="stylesheet" href="/assets/python.css?v=09f6a80a1a"><article class="prose wrap lesson" data-lesson="classes"><p class="meta">Lesson 21 of 21 · about 8 minutes with the exercises</p><h1>Classes and objects</h1><p>Everything you have used in Python is an <b>object</b>. A string is an object with methods such as <code>upper</code>. A list is an object with methods such as <code>append</code>. A <b>class</b> is the pattern from which objects are made. <code>str</code> and <code>list</code> are classes that come with Python. In this lesson you write a class of your own.</p><p>You can write useful programs for a long time without creating classes. But you need to read them, because libraries are full of them, and the idea is simpler than its vocabulary suggests.</p><h2 id="why-classes">Why classes?</h2><p>Suppose a program keeps data about bank accounts: a holder&#x27;s name and a balance. It also has actions that go with that data: deposit, withdraw, show. A class lets you keep the data and the actions together in one place, under one name.</p><h2 id="a-first-class">A first class</h2><div class="cb"><pre class="code"><code>class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+asha = Student(&quot;Asha&quot;, 78)
+ravi = Student(&quot;Ravi&quot;, 91)
+print(asha.name, asha.marks)
+print(ravi.name, ravi.marks)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>Asha 78
+Ravi 91</code></pre></div><p>Going through it:</p><ul><li><code>class Student:</code> starts the class. Class names start with a capital letter by custom.</li><li><code>__init__</code> is a special method that runs automatically each time a new object is made. Its job is to set up the object. Note the two underscores on each side.</li><li><code>self</code> is the object being set up. <code>self.name = name</code> stores the name inside that particular object.</li><li><code>Student(&quot;Asha&quot;, 78)</code> makes a new object. Python calls <code>__init__</code> for you and passes the object as <code>self</code>, so you give only the other two arguments.</li></ul><p><code>asha</code> and <code>ravi</code> are two separate objects made from the same pattern. Each has its own <code>name</code> and <code>marks</code>. These stored values are called <b>attributes</b>, and you read them with a dot.</p><h2 id="adding-methods">Adding methods</h2><p>A method is a function defined inside a class. Its first parameter is always <code>self</code>, which gives it access to the object&#x27;s attributes.</p><div class="cb"><pre class="code"><code>class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def has_passed(self):
+        return self.marks &gt;= 33
+
+    def describe(self):
+        result = &quot;passed&quot; if self.has_passed() else &quot;failed&quot;
+        return f&quot;{self.name} scored {self.marks} and {result}.&quot;
+
+s = Student(&quot;Meena&quot;, 28)
+print(s.has_passed())
+print(s.describe())</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>False
+Meena scored 28 and failed.</code></pre></div><p>When you write <code>s.describe()</code>, Python passes <code>s</code> as <code>self</code> for you. That is why the call has empty brackets although the method has one parameter. A method can call another method of the same object through <code>self</code>.</p><h2 id="methods-that-change-the-object">Methods that change the object</h2><div class="cb"><pre class="code"><code>class Account:
+    def __init__(self, holder, balance=0):
+        self.holder = holder
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount &gt; self.balance:
+            print(&quot;Not enough balance.&quot;)
+            return
+        self.balance -= amount
+
+acc = Account(&quot;Ravi&quot;, 500)
+acc.deposit(1000)
+acc.withdraw(2000)
+acc.withdraw(300)
+print(acc.holder, acc.balance)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>Not enough balance.
+Ravi 1200</code></pre></div><p>The balance lives inside the object and the rules for changing it live in the methods. The rest of the program does not need to know how withdrawing is checked. It just asks the account to do it.</p><h2 id="printing-an-object-nicely">Printing an object nicely</h2><p>Printing an object of your own class shows something unhelpful by default. Define the special method <code>__str__</code> to say what <code>print</code> should show.</p><div class="cb"><pre class="code"><code>class Book:
+    def __init__(self, title, pages):
+        self.title = title
+        self.pages = pages
+
+    def __str__(self):
+        return f&quot;{self.title} ({self.pages} pages)&quot;
+
+b = Book(&quot;Malgudi Days&quot;, 264)
+print(b)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>Malgudi Days (264 pages)</code></pre></div><h2 id="many-objects-in-a-list">Many objects in a list</h2><p>Objects go into lists like any other value. This is where classes start to pay off.</p><div class="cb"><pre class="code"><code>class Item:
+    def __init__(self, name, price, qty):
+        self.name = name
+        self.price = price
+        self.qty = qty
+
+    def total(self):
+        return self.price * self.qty
+
+cart = [Item(&quot;Pen&quot;, 10, 5), Item(&quot;Notebook&quot;, 45, 3), Item(&quot;Bag&quot;, 600, 1)]
+for item in cart:
+    print(f&quot;{item.name:&lt;10}{item.total():&gt;6}&quot;)
+print(&quot;Grand total:&quot;, sum(item.total() for item in cart))</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>Pen           50
+Notebook     135
+Bag          600
+Grand total: 785</code></pre></div><h2 id="inheritance-in-one-example">Inheritance in one example</h2><p>A class can be built on top of another. The new class gets everything the old one has and can add to it or change it. Put the parent class in brackets.</p><div class="cb"><pre class="code"><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return f&quot;{self.name} makes a sound.&quot;
+
+class Dog(Animal):
+    def speak(self):
+        return f&quot;{self.name} says woof.&quot;
+
+print(Animal(&quot;Cow&quot;).speak())
+print(Dog(&quot;Sheru&quot;).speak())</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>Cow makes a sound.
+Sheru says woof.</code></pre></div><p><code>Dog</code> did not define <code>__init__</code>, so it uses the one from <code>Animal</code>. It did define its own <code>speak</code>, which replaces the parent&#x27;s. This is enough inheritance for a first course.</p><h2 id="the-words-in-one-table">The words, in one table</h2><div class="tbl"><table><thead><tr><th>Word</th><th>Meaning</th></tr></thead><tbody><tr><td>class</td><td>the pattern, such as <code>Student</code></td></tr><tr><td>object or instance</td><td>one thing made from the pattern, such as <code>asha</code></td></tr><tr><td>attribute</td><td>a value stored in an object, such as <code>asha.marks</code></td></tr><tr><td>method</td><td>a function that belongs to a class, such as <code>describe</code></td></tr><tr><td><code>self</code></td><td>the object a method is working on</td></tr><tr><td><code>__init__</code></td><td>the method that sets up a new object</td></tr></tbody></table></div><h2 id="class-or-dictionary">Class or dictionary?</h2><p>For a simple record with a few fields and no behaviour, a dictionary is quicker to write and perfectly good. Reach for a class when the same data keeps travelling with the same functions, or when you find yourself passing the same three values into function after function.</p><h2 id="common-mistakes">Common mistakes</h2><ul><li>Leaving out <code>self</code> as the first parameter of a method. Calling it then fails with a <a href="/errors/typeerror/">TypeError</a> about the number of arguments.</li><li>Writing <code>name = name</code> in <code>__init__</code> instead of <code>self.name = name</code>. The value is lost when <code>__init__</code> ends.</li><li>Misspelling <code>__init__</code>, for example with one underscore. Python then never calls it.</li></ul><h2 id="try-it-yourself">Try it yourself</h2><div class="ex"><p><b>Exercise 1.</b> Write a class <code>Rectangle</code> with a length and a width, and a method <code>area</code>. Print the area of a 12 by 5 rectangle.</p><details><summary>Show one answer</summary><div class="cb"><pre class="code"><code>class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+print(Rectangle(12, 5).area())</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>60</code></pre></div></details></div><div class="ex"><p><b>Exercise 2.</b> Write a class <code>Counter</code> that starts at 0 and has a method <code>click</code> that adds 1. Click it three times and print the count.</p><details><summary>Show one answer</summary><div class="cb"><pre class="code"><code>class Counter:
+    def __init__(self):
+        self.count = 0
+
+    def click(self):
+        self.count += 1
+
+c = Counter()
+c.click()
+c.click()
+c.click()
+print(c.count)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>3</code></pre></div></details></div><div class="ex"><p><b>Exercise 3.</b> Add a method <code>grade</code> to a <code>Student</code> class that returns &quot;A&quot; for 75 marks and above, &quot;B&quot; for 50 and above, and &quot;C&quot; otherwise. Test with 82.</p><details><summary>Show one answer</summary><div class="cb"><pre class="code"><code>class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def grade(self):
+        if self.marks &gt;= 75:
+            return &quot;A&quot;
+        if self.marks &gt;= 50:
+            return &quot;B&quot;
+        return &quot;C&quot;
+
+print(Student(&quot;Asha&quot;, 82).grade())</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>A</code></pre></div></details></div><p class="donebox"><button class="btn ghost" type="button" data-done>Mark this lesson as done</button></p><nav class="ln" aria-label="Lessons"><a class="btn ghost" href="/list-comprehensions/">← List comprehensions</a><a class="btn" href="/projects/">Next: small projects →</a></nav><p class="hint">Examples on this page were run with Python 3.14 on 12 November 2026. The output shown is the real output.</p><p class="hint ind">This is an independent learning site. It is not connected with or approved by the Python Software Foundation. "Python" is a trademark of the Python Software Foundation and is used here only to name the language.</p></article><aside class="sponsor-slot wrap" data-sponsor hidden aria-label="Sponsored"></aside></main><footer class="ft"><div class="wrap ft-in"><div><b>Python</b><a href="/">Start</a><a href="/lessons/">Lessons</a><a href="/practice/">Practice</a><a href="/projects/">Projects</a><a href="/errors/">Errors</a><a href="/cheat-sheet/">Cheat sheet</a></div><div><b>More from ShareYourGroup</b><a href="https://sheets.shareyourgroup.com/">Google Sheets</a><a href="https://excel.shareyourgroup.com/">Excel Formulas</a><a href="https://shortcuts.shareyourgroup.com/">Keyboard Shortcuts</a><a href="https://cmd.shareyourgroup.com/">Commands</a><a href="https://sql.shareyourgroup.com/">SQL</a><a href="https://typing.shareyourgroup.com/">Typing</a><a href="https://prompts.shareyourgroup.com/">AI Prompts</a><a href="https://www.shareyourgroup.com/">WhatsApp group links</a><a href="https://www.shareyourgroup.com/p/submit-your-group-links.html">Add your group</a><a href="https://www.shareyourgroup.com/">ShareYourGroup home</a></div><div><b>From GroupChatOn</b><a href="https://infinity.groupchaton.com/">Free online tools</a><a href="https://novel.groupchaton.com/">Web novels</a><a href="https://share.groupchaton.com/">Share: groups and channels</a></div><div><b>About</b><a href="/about/">About and data sources</a><a href="/privacy-policy/">Privacy policy</a><a href="/terms-of-use/">Terms of use</a><a href="/disclaimer/">Disclaimer</a><a href="/contact/">Contact</a></div></div><div class="wrap ft-end"><p>Free to use. No login. © 2026 ShareYourGroup. All rights reserved.</p><p><span data-ns-credit>Designed &amp; Developed by: <a href="https://www.niveshsahayak.in/">Nivesh Sahayak</a></span></p></div></footer><script src="/assets/site.js?v=be6129bb4a" defer></script><script src="/assets/python.js?v=c15d5da5ed" defer></script><script src="https://assets.niveshsahayak.in/assets/credit.js" defer></script></body></html>

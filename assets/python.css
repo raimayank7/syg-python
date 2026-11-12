@@ -1,0 +1,24 @@
+/* python.shareyourgroup.com: lesson pages */
+.lesson pre{margin:0;padding:12px 14px;overflow-x:auto;font:500 .9rem/1.55 var(--mono);border-radius:10px;-webkit-overflow-scrolling:touch;tab-size:4}
+.lesson pre code{font:inherit;background:none;padding:0;border:0;white-space:pre}
+.lesson pre.code{background:#0d1420;color:#e6edf6;border:1px solid #1f2a3a}
+.lesson pre.out{background:var(--surface2);border:1px solid var(--line);color:var(--ink)}
+.lesson pre.err{border-left:4px solid var(--bad)}
+.lesson code{font:500 .92em var(--mono);background:var(--surface2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;overflow-wrap:anywhere}
+.cb{position:relative;margin:14px 0}
+.cb .cp{position:absolute;top:6px;right:6px;min-height:32px;padding:3px 10px;font-size:.8rem;background:#1b2636;color:#cfe;border-color:#33455e}
+.cb pre.code{padding-right:74px}
+.cap{margin:8px 0 4px;font-size:.8rem;font-weight:700;color:var(--soft);text-transform:uppercase;letter-spacing:.05em}
+.ex{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:10px;padding:10px 14px;margin:14px 0}
+.ex p{margin:.3em 0}.ex details{border:0;padding:0;background:none}.ex summary{color:var(--link)}
+.meta{color:var(--soft);font-size:.9rem;margin:0 0 6px}
+.ln{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;margin:22px 0 10px}
+.ln .btn{flex:1 1 220px;text-align:center}
+.donebox{margin:22px 0 0}
+[data-done].on{background:var(--accent);color:var(--accent-ink)}
+.ll a.done span::after{content:" \2713";color:var(--ok);font-weight:700}
+.prog{font-weight:600;color:var(--ok)}
+.pq li{margin:.5em 0}
+.ind{border-top:1px solid var(--line);padding-top:12px;margin-top:22px}
+.grid a span{min-width:0}
+@media print{.cp,.ln,.donebox,.ind,.chips{display:none!important}.lesson pre.code{background:#fff;color:#000;border:1px solid #999}.lesson pre{white-space:pre-wrap}.lesson pre code{white-space:pre-wrap}.cb{break-inside:avoid}}

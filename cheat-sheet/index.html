@@ -1,0 +1,97 @@
+<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python Cheat Sheet for Beginners: One Page | ShareYourGroup</title><meta name="description" content="A printable Python cheat sheet for beginners: variables, operators, strings, lists, dictionaries, if, loops, functions, files and errors on one page."><link rel="canonical" href="https://python.shareyourgroup.com/cheat-sheet/"><meta property="og:type" content="website"><meta property="og:title" content="Python Cheat Sheet for Beginners: One Page | ShareYourGroup"><meta property="og:description" content="A printable Python cheat sheet for beginners: variables, operators, strings, lists, dictionaries, if, loops, functions, files and errors on one page."><meta property="og:url" content="https://python.shareyourgroup.com/cheat-sheet/"><meta property="og:site_name" content="Python by ShareYourGroup"><meta property="og:image" content="https://python.shareyourgroup.com/icons/share.png"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#06080c"><link rel="icon" href="/icons/fav-32.png"><link rel="apple-touch-icon" href="/icons/icon-180.png"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5935207738848708" crossorigin="anonymous"></script><style>:root{--bg:#f4f6fa;--ink:#0b1220}@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#06080c;--ink:#eef2f7}}:root[data-theme=dark]{--bg:#06080c;--ink:#eef2f7}html{background:var(--bg);color:var(--ink)}body{margin:0;background:var(--bg)}.boot{position:fixed;inset:0;background:var(--bg);z-index:100;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;opacity:0;pointer-events:none;animation:bi .2s ease .25s forwards}.boot i{width:84px;height:84px;border-radius:22px;background:url(/icons/icon-192.png) center/cover no-repeat;animation:bb 1.2s ease-in-out infinite}.boot b{width:120px;height:4px;border-radius:4px;background:linear-gradient(90deg,transparent,#25d366,transparent);background-size:200% 100%;animation:bs 1.1s linear infinite}@keyframes bi{to{opacity:1}}@keyframes bb{50%{transform:scale(1.07)}}@keyframes bs{from{background-position:200% 0}to{background-position:-200% 0}}html.ready .boot{display:none}html.ready main{animation:sin .3s ease-out}@keyframes sin{from{opacity:0;transform:translateY(6px)}}@media (prefers-reduced-motion:reduce){.boot i,.boot b,html.ready main{animation:none}}</style><noscript><style>.boot{display:none}</style></noscript><script>try{var t=localStorage.getItem("syg-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}setTimeout(function(){document.documentElement.classList.add("ready")},4000)</script><link rel="preload" href="/assets/site.css?v=1f799d5064" as="style"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://python.shareyourgroup.com/#site", "url": "https://python.shareyourgroup.com/", "name": "Python by ShareYourGroup", "publisher": {"@type": "Organization", "name": "ShareYourGroup", "url": "https://www.shareyourgroup.com/"}}, {"@type": "Article", "headline": "Python cheat sheet for beginners", "description": "A printable Python cheat sheet for beginners: variables, operators, strings, lists, dictionaries, if, loops, functions, files and errors on one page.", "inLanguage": "en-IN", "dateModified": "2026-11-12", "author": {"@type": "Organization", "name": "ShareYourGroup"}}]}</script></head><body><div class="boot" aria-hidden="true"><i></i><b></b></div><link rel="stylesheet" href="/assets/site.css?v=1f799d5064"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap" media="print" onload="this.media='all'"><a class="skip" href="#main">Skip to content</a><header class="hd"><div class="wrap hd-in"><a class="brand" href="/" aria-label="Python by ShareYourGroup, home"><img class="mk mk-l" src="/icons/logo-light.webp" alt="ShareYourGroup" width="200" height="44"><img class="mk mk-d" src="/icons/logo-dark.webp" alt="ShareYourGroup" width="200" height="44"><i>Python</i></a><nav class="nav" aria-label="Sections"><a href="/">Start</a><a href="/lessons/">Lessons</a><a href="/practice/">Practice</a><a href="/projects/">Projects</a><a href="/errors/">Errors</a><a href="/cheat-sheet/" aria-current="page">Cheat sheet</a></nav><button class="ic" type="button" data-theme-btn aria-label="Light or dark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></div></header><nav class="crumbs wrap" aria-label="You are here"><a href="/">Python</a></nav><main id="main"><link rel="stylesheet" href="/assets/python.css?v=09f6a80a1a"><article class="prose wrap lesson"><h1>Python cheat sheet for beginners</h1><p class="acts"><button class="btn sm" type="button" data-print>Print this page</button></p><p>The core of the language on one page. It is a reminder for people who have done the lessons, not a replacement for them. Each heading links to the lesson that explains it. Print it or keep it open while you practise.</p><h2 id="output-input-and-variables">Output, input and variables</h2><p>See lessons on <a href="/print-and-comments/">print</a>, <a href="/variables/">variables</a> and <a href="/input/">input</a>.</p><div class="cb"><pre class="code"><code>print(&quot;Hello&quot;, name, sep=&quot;, &quot;, end=&quot;\n&quot;)   # show values
+name = input(&quot;Your name? &quot;)                # always returns text
+age = int(input(&quot;Age? &quot;))                  # convert to a number
+x, y = 5, 9                                # two variables at once
+x += 1                                     # same as x = x + 1
+# a comment: Python ignores this line</code></pre><button class="btn sm ghost cp" type="button">Copy</button></div><h2 id="types-and-conversion">Types and conversion</h2><div class="tbl"><table><thead><tr><th>Type</th><th>Example</th><th>Convert with</th></tr></thead><tbody><tr><td><code>int</code></td><td><code>42</code></td><td><code>int(&quot;42&quot;)</code></td></tr><tr><td><code>float</code></td><td><code>3.14</code></td><td><code>float(&quot;3.14&quot;)</code></td></tr><tr><td><code>str</code></td><td><code>&quot;hello&quot;</code></td><td><code>str(42)</code></td></tr><tr><td><code>bool</code></td><td><code>True</code>, <code>False</code></td><td><code>bool(0)</code></td></tr><tr><td><code>list</code></td><td><code>[1, 2, 3]</code></td><td><code>list(&quot;abc&quot;)</code></td></tr><tr><td><code>tuple</code></td><td><code>(1, 2)</code></td><td><code>tuple([1, 2])</code></td></tr><tr><td><code>set</code></td><td><code>{1, 2}</code></td><td><code>set([1, 1, 2])</code></td></tr><tr><td><code>dict</code></td><td><code>{&quot;a&quot;: 1}</code></td><td><code>dict(a=1)</code></td></tr></tbody></table></div><h2 id="operators">Operators</h2><div class="tbl"><table><thead><tr><th>Kind</th><th>Operators</th></tr></thead><tbody><tr><td>Arithmetic</td><td><code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>//</code> (floor) <code>%</code> (remainder) <code>**</code> (power)</td></tr><tr><td>Comparison</td><td><code>==</code> <code>!=</code> <code>&lt;</code> <code>&gt;</code> <code>&lt;=</code> <code>&gt;=</code></td></tr><tr><td>Logic</td><td><code>and</code> <code>or</code> <code>not</code></td></tr><tr><td>Membership</td><td><code>in</code> <code>not in</code></td></tr></tbody></table></div><p>See <a href="/numbers/">numbers and maths</a>.</p><h2 id="strings">Strings</h2><p>See <a href="/strings/">strings</a> and <a href="/string-methods/">string methods</a>.</p><div class="cb"><pre class="code"><code>s = &quot;Hello, World&quot;
+print(len(s), s[0], s[-1], s[0:5], s[::-1])
+print(s.upper(), s.lower(), s.replace(&quot;World&quot;, &quot;India&quot;))
+print(s.split(&quot;, &quot;), &quot;-&quot;.join([&quot;a&quot;, &quot;b&quot;]), &quot;  hi &quot;.strip())
+print(s.find(&quot;World&quot;), s.count(&quot;l&quot;), s.startswith(&quot;He&quot;), &quot;lo&quot; in s)
+n = 3.14159
+print(f&quot;{s} has {len(s)} characters; pi is {n:.2f}&quot;)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>12 H d Hello dlroW ,olleH
+HELLO, WORLD hello, world Hello, India
+[&#x27;Hello&#x27;, &#x27;World&#x27;] a-b hi
+7 3 True True
+Hello, World has 12 characters; pi is 3.14</code></pre></div><h2 id="decisions">Decisions</h2><p>See <a href="/if-else/">if, elif and else</a>.</p><div class="cb"><pre class="code"><code>marks = 68
+if marks &gt;= 75:
+    grade = &quot;A&quot;
+elif marks &gt;= 50:
+    grade = &quot;B&quot;
+else:
+    grade = &quot;C&quot;
+print(grade, &quot;pass&quot; if marks &gt;= 33 else &quot;fail&quot;)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>B pass</code></pre></div><h2 id="loops">Loops</h2><p>See <a href="/while-loops/">while loops</a> and <a href="/for-loops/">for loops</a>.</p><div class="cb"><pre class="code"><code>for i in range(3):            # 0 1 2
+    print(i, end=&quot; &quot;)
+for i in range(2, 11, 4):     # 2 6 10
+    print(i, end=&quot; &quot;)
+print()
+n = 3
+while n &gt; 0:
+    n -= 1
+    if n == 1:
+        continue              # skip the rest of this round
+    print(&quot;n is&quot;, n)
+for number, name in enumerate([&quot;Asha&quot;, &quot;Ravi&quot;], 1):
+    print(number, name)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>0 1 2 2 6 10 
+n is 2
+n is 0
+1 Asha
+2 Ravi</code></pre></div><p><code>break</code> leaves a loop at once. <code>continue</code> jumps to the next round.</p><h2 id="lists">Lists</h2><p>See <a href="/lists/">lists</a> and <a href="/sorting-and-slicing/">sorting and slicing</a>.</p><div class="cb"><pre class="code"><code>a = [5, 2, 9]
+a.append(7)            # add at the end
+a.insert(0, 1)         # add at a position
+a.remove(2)            # remove by value
+last = a.pop()         # remove and return the last
+a.sort()               # sort in place
+print(a, last, len(a), sum(a), min(a), max(a))
+print(sorted(a, reverse=True), a[:2], a[-1], 9 in a, a.index(9))
+print([x * 2 for x in a if x &gt; 1])</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>[1, 5, 9] 7 3 15 1 9
+[9, 5, 1] [1, 5] 9 True 2
+[10, 18]</code></pre></div><h2 id="tuples-and-sets">Tuples and sets</h2><p>See <a href="/tuples-and-sets/">tuples and sets</a>.</p><div class="cb"><pre class="code"><code>point = (3, 5)
+x, y = point
+print(x, y)
+s = {1, 2, 2, 3}
+s.add(4)
+print(sorted(s), sorted(s &amp; {2, 4, 6}), sorted(s - {1}))</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>3 5
+[1, 2, 3, 4] [2, 4] [2, 3, 4]</code></pre></div><h2 id="dictionaries">Dictionaries</h2><p>See <a href="/dictionaries/">dictionaries</a>.</p><div class="cb"><pre class="code"><code>d = {&quot;tea&quot;: 10, &quot;lassi&quot;: 40}
+d[&quot;samosa&quot;] = 15                 # add or change
+print(d[&quot;tea&quot;], d.get(&quot;milk&quot;, 0), &quot;tea&quot; in d, len(d))
+for key, value in d.items():
+    print(key, value)
+del d[&quot;tea&quot;]
+print(list(d.keys()), list(d.values()))</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>10 0 True 3
+tea 10
+lassi 40
+samosa 15
+[&#x27;lassi&#x27;, &#x27;samosa&#x27;] [40, 15]</code></pre></div><h2 id="functions">Functions</h2><p>See <a href="/functions/">functions</a> and <a href="/arguments-and-scope/">arguments and scope</a>.</p><div class="cb"><pre class="code"><code>def area(length, width=1):
+    &quot;&quot;&quot;Return the area of a rectangle.&quot;&quot;&quot;
+    return length * width
+
+print(area(4, 5), area(4), area(width=2, length=3))</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>20 4 6</code></pre></div><h2 id="modules">Modules</h2><p>See <a href="/modules/">modules and import</a>.</p><div class="cb"><pre class="code"><code>import math, random, datetime
+random.seed(1)
+print(math.sqrt(16), math.ceil(2.1), math.pi)
+print(random.randint(1, 6), random.choice([&quot;a&quot;, &quot;b&quot;]))
+print(datetime.date(2026, 11, 12).strftime(&quot;%d %B %Y&quot;))</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>4.0 3 3.141592653589793
+2 a
+12 November 2026</code></pre></div><h2 id="files">Files</h2><p>See <a href="/files/">reading and writing files</a>.</p><div class="cb"><pre class="code"><code>with open(&quot;demo.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:   # &quot;w&quot; write, &quot;a&quot; append, &quot;r&quot; read
+    f.write(&quot;line one\nline two\n&quot;)
+with open(&quot;demo.txt&quot;, encoding=&quot;utf-8&quot;) as f:
+    for line in f:
+        print(line.strip())</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>line one
+line two</code></pre></div><h2 id="errors">Errors</h2><p>See <a href="/try-except/">try and except</a> and the <a href="/errors/">error pages</a>.</p><div class="cb"><pre class="code"><code>try:
+    n = int(&quot;abc&quot;)
+except ValueError:
+    print(&quot;not a number&quot;)
+else:
+    print(&quot;ok&quot;, n)
+finally:
+    print(&quot;always runs&quot;)</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>not a number
+always runs</code></pre></div><h2 id="classes">Classes</h2><p>See <a href="/classes/">classes and objects</a>.</p><div class="cb"><pre class="code"><code>class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def passed(self):
+        return self.marks &gt;= 33
+
+s = Student(&quot;Asha&quot;, 78)
+print(s.name, s.passed())</code></pre><button class="btn sm ghost cp" type="button">Copy</button><p class="cap">Output</p><pre class="out" aria-label="Output"><code>Asha True</code></pre></div><h2 id="five-habits-that-prevent-most-beginner-bugs">Five habits that prevent most beginner bugs</h2><ol><li>Indent with four spaces, never tabs, and keep every line of a block level.</li><li>Remember that <code>input</code> gives text. Convert before doing maths.</li><li>Counting starts at 0, and the stop value of a range or slice is not included.</li><li><code>=</code> stores, <code>==</code> compares.</li><li>Methods such as <code>sort</code> and <code>append</code> change the list and return <code>None</code>. Do not assign their result.</li></ol><p class="hint">Examples on this page were run with Python 3.14 on 12 November 2026. The output shown is the real output.</p><p class="hint ind">This is an independent learning site. It is not connected with or approved by the Python Software Foundation. "Python" is a trademark of the Python Software Foundation and is used here only to name the language.</p></article><aside class="sponsor-slot wrap" data-sponsor hidden aria-label="Sponsored"></aside></main><footer class="ft"><div class="wrap ft-in"><div><b>Python</b><a href="/">Start</a><a href="/lessons/">Lessons</a><a href="/practice/">Practice</a><a href="/projects/">Projects</a><a href="/errors/">Errors</a><a href="/cheat-sheet/" aria-current="page">Cheat sheet</a></div><div><b>More from ShareYourGroup</b><a href="https://sheets.shareyourgroup.com/">Google Sheets</a><a href="https://excel.shareyourgroup.com/">Excel Formulas</a><a href="https://shortcuts.shareyourgroup.com/">Keyboard Shortcuts</a><a href="https://cmd.shareyourgroup.com/">Commands</a><a href="https://sql.shareyourgroup.com/">SQL</a><a href="https://typing.shareyourgroup.com/">Typing</a><a href="https://prompts.shareyourgroup.com/">AI Prompts</a><a href="https://www.shareyourgroup.com/">WhatsApp group links</a><a href="https://www.shareyourgroup.com/p/submit-your-group-links.html">Add your group</a><a href="https://www.shareyourgroup.com/">ShareYourGroup home</a></div><div><b>From GroupChatOn</b><a href="https://infinity.groupchaton.com/">Free online tools</a><a href="https://novel.groupchaton.com/">Web novels</a><a href="https://share.groupchaton.com/">Share: groups and channels</a></div><div><b>About</b><a href="/about/">About and data sources</a><a href="/privacy-policy/">Privacy policy</a><a href="/terms-of-use/">Terms of use</a><a href="/disclaimer/">Disclaimer</a><a href="/contact/">Contact</a></div></div><div class="wrap ft-end"><p>Free to use. No login. © 2026 ShareYourGroup. All rights reserved.</p><p><span data-ns-credit>Designed &amp; Developed by: <a href="https://www.niveshsahayak.in/">Nivesh Sahayak</a></span></p></div></footer><script src="/assets/site.js?v=be6129bb4a" defer></script><script src="/assets/python.js?v=c15d5da5ed" defer></script><script src="https://assets.niveshsahayak.in/assets/credit.js" defer></script></body></html>
